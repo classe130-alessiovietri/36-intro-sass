@@ -1,0 +1,29 @@
+@use 'partials/variables' as *;
+// @use 'partials/mixins' as *;
+// @import 'partials/variables';
+@import 'partials/mixins';
+
+main {
+    @include debug-rules;
+    text-align: center;
+    color: $mainColor;
+    border: 3px dashed $mainColor;
+  
+    p {
+        color: blue; 
+    
+        // & :first-child {   // main p :first-child
+        &:first-child {   // main p:first-child
+            background-color: purple;
+        }
+    
+        > span {
+            text-decoration: underline;
+            @include debug-rules;
+        }
+    }
+}
+
+.debug {
+    @include debug-rules;
+}

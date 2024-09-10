@@ -32,15 +32,34 @@ export default {
     <AppHeader />
     
     <main>
+      <p>
+        P figlio diretto di main
+
+        <span>
+          Ciao ragazzi
+        </span>
+      </p>
+
+      <div>
+        <p>
+          P figlio di main, ma NON diretto
+        </p>
+        <p>
+          P figlio di main, ma NON diretto e NON primo figlio
+        </p>
+      </div>
+
       <button @click="incrementCount()">
         {{ count }}
       </button>
     </main>
+
+    <div class="debug">
+      Ciao questo ha classe debug
+    </div>
   </div>
 </template>
 
-<style scoped>
-main {
-  text-align: center;
-}
+<style lang="scss" scoped>
+@use 'assets/scss/main' as *;
 </style>
